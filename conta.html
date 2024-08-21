@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criando uma conta com objetos</title>
+    <script>
+        class Conta {
+            construtor(nome,telefone,dataDeNascimento,saldo,numConta){
+                this.nome = nome
+                this.telefone = telefone
+                this.dataDeNascimento = dataDeNascimento
+                this.saldo = saldo
+                this.numConta = numConta
+            }
+
+    inserir(){
+
+    }
+
+    exibir(){
+        alert('Nome: ' + this.nome + 'Telefone: ' + this.telefone +
+            'Nascimento: ' + this.dataDeNascimento + 'Saldo: ' + this.saldo +
+            'Numero da conta: ' + this.numConta
+        )
+
+    }
+
+    debitar(){
+
+    }
+        }
+
+    function Exibir() {
+        let numConta = parseInt(prompt('Digite o número da conta'))
+        let valid = false 
+        Contas.forEach(conta => {
+            if(conta.numConta == numConta) {
+                conta.Exibir()
+                valid = true
+            }
+        }
+
+        )
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <input type="button" onclick="Exibir()" value="Exibir"/>
+    <input type="button" onclick="Debitar()" value="Debitar"/>
+</body>
+</html>
