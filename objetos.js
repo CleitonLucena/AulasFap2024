@@ -33,5 +33,7 @@ limite() {
 let conta1 = new ContaBancaria
 let conta2 = new ContaBancaria
 
+conta1.verificarSaldo()
+
 console.log(conta1.verificarSaldo())
 
