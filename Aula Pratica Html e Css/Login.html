@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina de Login</title>   
+    <style>
+        main {
+            min-width: 250px;
+            max-width: 600px;
+            min-height: 500px;
+            height: 500px;
+            max-height: 500px;
+            
+
+            border: 3px solid #ddd;
+            border-radius: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+
+        section {
+            width: 80%;
+            height: 60%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Restaurante</h1>
+    </header>
+
+    <section>
+        <div class="page">
+        <form method="POST" class="formLogin">
+            <label for="email">Nome do Usuário</label>
+            <input type="email" autofocus="true" /></br></br>
+            <label for="password">Digite Sua Senha</label>
+            <input type="password"/></br></br>
+            <input type="submit" value="Acessar" class="btn" /></br></br>
+            <a href="/">Esqueceu sua Senha?</a>
+            <a href="/">Criar Conta</a>
+        </form>
+        </div>
+    </section>
+
+    <footer>Restaurante - Rua Enesto de Paula Santos, 187 Sala 506 - Recife-Pe</footer>
+</main>
+</body>
+</html>
