@@ -21,12 +21,12 @@
             {
                 super(props);
                 this.state = {
-                    nome : "Rafael"
+                    nome : "Cleiton"
                 };
             }
 
             changeName = () => {
-                this.setState({nome: "Nunes"});
+                this.setState({nome: "Lucena"});
             }
 
             render() {
@@ -47,9 +47,34 @@
                     </div >
                 );
             }
+
+        getSnapshotBeforeUpdate(prevProps, prevState){
+            alert('getSnapshotBeforeUpdate ' + prevProps.nome + " " + prevState.nome)
         }
 
-        ReactDOM.render(<UserName color = "Amarelo"/>, document.getElementById('root'))
+        componentDidUpdate() {
+            alert('componentDidUpdate')
+        }
+
+        componentDidMount() {
+            alert('componentDidMount')
+        }
+
+        shouldComponentUpdate(){
+            alert('shouldComponentUpdate')
+            return true
+        }
+
+        getDerivedStateFromProps(){
+            alert('getDerivedStateFromProps')
+        }
+
+
+
+
+        }
+
+        ReactDOM.render(<UserName color = "Azul"/>, document.getElementById('root'))
 
     </script>
 </body>
