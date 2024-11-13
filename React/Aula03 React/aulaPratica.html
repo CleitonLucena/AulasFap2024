@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <title>Hello React!</title>
+
+    <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        class UserName extends React.Component {
+            
+            render() {
+                return (
+                    <div class="container">
+                        <h1>Consulta de Endereço pelo CEP</h1>
+                        <label for="cep">Digite o CEP:</label>
+                        <input type="text" id="cep" placeholder="Ex: 01001000" maxlength="8"></input>
+                        <button type="button" onClick={consultarCEP}>Buscar Endereço</button>
+                         <div id="result" class="result"></div>
+                    </div>
+                );
+            }
+        }
+
+        ReactDOM.render(<UserName/>, document.getElementById('root'))
+
+    </script>
+</body>
+
+</html>
